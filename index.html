@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도원사찬 트위터</title>
+    <!--파비콘-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+  
+
+ <div class="container">
+    <!--헤더-->
+    <div class="header">
+        <div class="menu">
+         <img src="img/logo.png" alt="로고">
+         <ul class="gnb" id="gnb">
+            <li class="click">
+                <span class="material-symbols-outlined">
+                    home
+                    </span><a href="#">Home</a></li>
+            <li>
+                <span class="material-symbols-outlined">
+                    notifications
+                    </span><a href="#" class="ww">Notifications</a></li>
+            <li>
+                <span class="material-symbols-outlined">
+                mail
+                </span><a href="#" class="ww">Messages</a></li>
+                <!--반응형에서만-->
+                    <li class="mobile">
+                        <span class="material-symbols-outlined">
+                         tag
+                     </span></li> 
+                    <li class="mobile">
+                        <span class="material-symbols-outlined">
+                        search
+                    </span></li>
+                 <!--/반응형-->
+            <li>
+                <span class="material-symbols-outlined">
+                bookmark
+                </span><a href="#"class="ww">Bookmarks</a></li>
+            <li>
+                <span class="material-symbols-outlined">
+                account_circle
+                </span><a href="#" class="ww">Profile</a></li>
+            <li>
+                <span class="material-symbols-outlined">
+                more_horiz
+                </span><a href="#" class="ww">More</a></li>
+
+
+         </ul>
+         <button type="submit" onclick="mention()"> Tweet </button>
+        </div>
+
+        <div class="userId">
+            <div class="profileImg">
+            
+            </div>
+            <div class="profileUser">
+                <p class="username">알람</p>
+                <p class="userPId"> @loe_hoho</p>
+            </div>
+            <div class="profileMore">
+                <span class="material-symbols-outlined">
+                    more_horiz
+                    </span>
+            </div>
+        </div>
+    </div>
+    <!--/헤더-->
+
+    
+    <!--메인-->
+    <div class="flex">
+        <main>
+          <p id="menuTitle">Home</p>
+          <div class="textbox">
+
+            <div class="profileImg">    
+                <!--프로필 이미지-->  
+            </div>
+                <select name="everyone" id="everyone">
+                    <option value="everyone">everyone</option>
+                    <option value="Circle">Twitter Circle</option>
+                </select>
+                <textarea onkeyup="adjustHeight();" placeholder="당신의 이야기를 나눠보세요."></textarea>
+         
+                <div class="selectbox">
+                  <div class="tweetSelect">
+                      <span class="material-symbols-outlined imgfile">
+                          image
+                          </span>
+                      <span class="material-symbols-outlined">
+                          gif_box
+                          </span>
+                      <span class="material-symbols-outlined">
+                          ballot
+                          </span>
+                      <span class="material-symbols-outlined">
+                          sentiment_satisfied
+                          </span>
+                      <span class="material-symbols-outlined">
+                          schedule
+                          </span>
+                      <span class="material-symbols-outlined">
+                          my_location
+                          </span>
+                 </div>
+                 <button type="submit" id="textSudmit">Tweet</button>
+       
+                </div>
+                
+            </div>
+         <!--타임라인-->   
+        <div id="timeline">
+            <div class="timeline">
+                <div class="userline">
+                    <div class="profileImg sachan">
+                        <img src="img/sa.png" alt="사찬">
+                    </div>
+                    <div class="timeLname">
+                        <span>우사찬 <label>@woo_sachan</label></span>
+                            <div class="Tcontent">
+                                <p>망할 놈 
+                               </p>
+                            </div>
+                            <div class="timeline_imoji">
+                                <span class="material-symbols-outlined">
+                                    send
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    cached
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    favorite
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    bar_chart
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    ios_share
+                                    </span>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="userline">
+                    <div class="profileImg sachan">
+                        <img src="img/sa.png" alt="사찬">
+                    </div>
+                    <div class="timeLname">
+                        <span>우사찬 <label>@woo_sachan</label></span>
+                            <div class="Tcontent">
+                                <p>....?
+                               </p>
+                            </div>
+                            <div class="timeline_imoji">
+                                <span class="material-symbols-outlined">
+                                    send
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    cached
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    favorite
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    bar_chart
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    ios_share
+                                    </span>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="userline">
+                    <div class="profileImg sachan">
+                        <img src="img/al.png" alt="알람">
+                    </div>
+                    <div class="timeLname">
+                        <span>알람 <label>@loe_hoho</label></span>
+                            <div class="Tcontent">
+                                <p>우도원님이 퇴장하셨습니다.
+                               </p>
+                            </div>
+                            <div class="timeline_imoji">
+                                <span class="material-symbols-outlined">
+                                    send
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    cached
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    favorite
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    bar_chart
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    ios_share
+                                    </span>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="userline">
+                    <div class="profileImg sachan">
+                        <img src="img/do.png" alt="도원">
+                    </div>
+                    <div class="timeLname">
+                        <span>우도원 <label>@woo_puppy</label></span>
+                            <div class="Tcontent">
+                                <p>저 배부르고 속 안 좋아서 가보겠습니다.
+                               </p>
+                            </div>
+                            <div class="timeline_imoji">
+                                <span class="material-symbols-outlined">
+                                    send
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    cached
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    favorite
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    bar_chart
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    ios_share
+                                    </span>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="userline">
+                    <div class="profileImg sachan">
+                        <img src="img/sa.png" alt="사찬">
+                    </div>
+                    <div class="timeLname">
+                        <span>우사찬 <label>@woo_sachan</label></span>
+                            <div class="Tcontent">
+                                <p>도원아 많이 먹어.
+                               </p>
+                            </div>
+                            <div class="timeline_imoji">
+                                <span class="material-symbols-outlined">
+                                    send
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    cached
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    favorite
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    bar_chart
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    ios_share
+                                    </span>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </main>
+        
+
+        <!--오른쪽 사이드-->
+        <aside>     
+            <div class="searchbox">
+                <span class="material-symbols-outlined searchSpan" >
+                    search
+                    </span> 
+                    <input type="text" placeholder="Search Twitter" id="searchform">
+            </div>
+
+            <div class="hashbox">
+                <p>Trends for you</p>
+                <ul class="hashTag" id="hashTag">
+                    <li>
+                        <span>Trending in South Korea</span> 
+                        <p>자바스크립트</p>
+                        <span>1,000tweet</span> 
+                    </li>
+                </ul>
+            </div>
+        </aside>  
+    </div>
+ </div>
+
+<!--다크/라이트 모드 -->
+
+<div class="darkNlight" onclick="dark()" value="dark">
+    <div class="bol"></div>
+</div>
+      
+
+<!--트윗 창-->
+<div class="menshionBox" id="menshionBox">
+    <div class="tweetMension">
+        <span class="material-symbols-outlined closemention" id="closemention" onclick="closemention()">
+            close
+            </span>
+        <div class="mensionflex">
+            <div class="profileImg">
+                <!--프로필 이미지-->
+            </div>
+            <div class="menshionG">
+                <select name="everyone" id="everyone">
+                    <option value="everyone">everyone</option>
+                    <option value="Circle">Twitter Circle</option>
+                </select>
+                   <textarea onkeyup="adjustHeight2();" name="tweetMension" id="Mension"  placeholder="당신의 이야기를 나눠보세요."></textarea>
+           
+                   <div class="selectbox">
+                    <div class="tweetSelect">
+                        <span class="material-symbols-outlined imgfile">
+                            image
+                            </span>
+                        <span class="material-symbols-outlined">
+                            gif_box
+                            </span>
+                        <span class="material-symbols-outlined">
+                            ballot
+                            </span>
+                        <span class="material-symbols-outlined">
+                            sentiment_satisfied
+                            </span>
+                        <span class="material-symbols-outlined">
+                            schedule
+                            </span>
+                        <span class="material-symbols-outlined">
+                            my_location
+                            </span>
+                     </div>
+                      <button type="submit" id="textSudmit2">Tweet</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="js/main.js"></script>
+
+    
+</body>
+</html>

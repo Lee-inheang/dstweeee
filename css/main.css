@@ -1,0 +1,546 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+body,html{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow-x: hidden;
+    color: #333;
+}
+
+span{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+/*반응형*/
+@media (max-width: 656px){
+    .container{
+        width: 656px;
+    }
+    .header{
+        width: 90px !important;
+        height: 980px;
+    
+    }
+    .gnb li a{
+        display: none;
+    }
+        
+    .header button[type=submit]{
+        margin-top: 38px;
+        width:50px !important;
+        height: 50px;
+        border-radius: 50px !important; 
+        font-size: 12px !important;
+
+    }
+    .profileUser, .profileMore{
+        display: none;
+    }
+    .userId{
+        width: 58px !important;
+        margin: 10px 20px !important; 
+    }
+    li.mobile{
+        display: block !important;
+    }
+
+}
+
+/*전체*/
+.container{
+    width: 1300px;
+    height: auto;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+    /* justify-content: end; */
+}
+
+
+/*헤더*/
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    width: 274px;
+    height: 980px;
+    z-index: 2;
+}
+
+.header img{
+    width: 24px;
+    padding-left: 10px;
+}
+
+.menu{
+    padding: 18px 20px;
+
+}
+.gnb{
+    padding-top: 36px;
+}
+.gnb li{
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: -1px;
+    line-height: 48px;
+    padding-left: 10px;
+    transition: all 0.3s;
+    border-radius: 20px;
+    
+}
+
+li.mobile{
+    display: none;
+}
+
+
+
+.gnb li:hover{
+    background-color: #E5E5E5;
+    border-radius: 20px;
+}
+
+
+.gnb li span{
+    padding-right: 22px;
+    font-size: 28px;
+    vertical-align:middle;
+}
+li.click{
+    font-weight: bold;
+}
+
+.header button[type=submit]{
+    margin-top: 38px;
+    width:215px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background-color: #1D9BF0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.header button[type=submit]:hover{
+    background-color: #2289ce;
+}
+
+.header .userId{
+    width: 215px;
+    height: 58px;
+    background-color: #ffffff;
+    margin: 0px 30px;
+    border-radius: 30px;
+    display: flex;
+    margin-bottom: 18px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.header .userId:hover{
+    background-color: #E5E5E5;
+}
+
+.profileImg{
+    width: 38px;
+    height: 38px;
+    /* background: url(../img/profilemini.png); */
+    background-size: 48px;
+    /* margin: 10px 12px; */
+    object-fit:cover;
+}
+.profileImg img{
+    border-radius: 50%;
+    width: 38px;
+    height: 40px;
+}
+
+.profileUser{
+    width: 124px;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: lighter;
+}
+p.username{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+    padding-bottom: 2px;
+}
+.profileMore span{
+    font-size: 18px;
+    padding-top: 4px;
+    vertical-align: middle;
+   
+}
+
+
+
+/*메인 공통*/
+#menuTitle,.search{
+    padding: 18px 20px;
+}
+
+/*반응형*/
+@media (max-width: 656px){
+    main{
+        width: 656px !important;
+        margin-left: 90px !important;
+    }
+    .textbox{
+        width: 520px !important;
+    }
+    main textarea{
+    width: 400px !important;
+    }
+    .selectbox{
+        width: 418px !important;
+    }
+    .tweetSelect{
+        width: 400px !important;
+    }
+}
+
+
+/* 메인 */
+
+main{
+    width: 738px;
+    position: relative;
+    margin-left: 274px;
+
+}
+
+#menuTitle{
+    font-size: 20px;
+    font-weight: bold;
+}
+.textbox{
+    display: flex;
+    border: 1px solid #E5E5E5;
+    width: 677px;
+    height: 175px;
+    padding-bottom: 12px;
+
+}
+
+main .profileImg{
+ width: 50px !important;
+ height: 50px !important;
+ background-size: 60px;
+ margin: 16px 20px;
+
+}
+
+main select,.menshionG select{
+    width: 89px;
+    height:22px;
+    margin-top: 12px;
+    border-radius: 20px;
+    text-align: center;
+    color: #1D9BF0;
+    font-weight: bold;
+    border: 1px solid #E5E5E5;
+}
+
+main textarea{
+    position: absolute;
+    top: 110px;
+    left: 92px;
+    width: 550px;
+    height: 65px;
+    resize: none; 
+    border: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #E5E5E5;
+    outline: none;
+}
+main button{
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.selectbox{
+    display: flex;
+    width: 570px;
+    justify-content: space-between;
+    position: absolute;
+    top: 190px;
+    left: 92px;
+}
+
+.selectbox button{
+    background-color: #1D9BF0;
+    opacity: 40%;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+
+.tweetSelect{
+    line-height: 40px;
+}
+.tweetSelect span{
+    font-size: 20px;
+    color: #1D9BF0 ;
+    margin-left: 4px;
+}
+
+
+/*반응형*/
+@media (max-width: 656px){
+    .timeline{
+     width: 500px !important;
+
+    }
+    .dog{
+        width: 50px !important;
+    }
+    .timeline_imoji{
+        width: 400px !important;
+    }
+    .Tcontent{
+        width: 400px !important;
+    }
+
+}
+
+/*타임라인*/
+.timeline{
+    padding: 12px 10px;
+}
+.userline{
+    display: flex;
+}
+
+.timeLname{
+    padding-top: 10px;
+
+}
+
+.timeLname span{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.timeLname label{
+    color:#989898;
+    font-weight: 300;
+}
+
+.timeline{
+    border:1px solid #E5E5E5 ;
+    border-top: none;
+    padding-top: 12px;
+}
+
+.Tcontent{
+    width: 565px;
+    height: auto;
+    white-space: pre-line;
+    line-height: 1.2;
+    padding: 10px 0px;
+}
+
+.timeline_imoji{
+    display: flex;
+    justify-content: space-between;
+}
+.timeline_imoji span{
+    font-size: 18px;
+    color:#989898;
+}
+@media (max-width: 656px){
+    aside{
+     display: none;
+    }
+}
+
+/*사이드 */
+
+aside{
+    width: 288px;
+    position: relative;
+    margin: 18px 30px;
+}
+
+.searchSpan{
+    vertical-align: middle;
+    position: absolute;
+    z-index: 3;
+    left: 10px;
+    top: 10px;
+    line-height: 24px;
+    color : #6b6b6b;
+    transition: all 0.2s;
+}
+.searchbox input[type=text]{
+    position: relative;
+    width: 240px;
+    height: 32px;
+    padding: 4px 8px;
+    padding-left: 40px;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    outline: none;
+    background-color: #F3F3F3;
+    transition: all 0.2s;
+}
+
+.hashbox{
+    background-color: #F3F3F3;
+    width: 288px;
+    border-radius: 20px;
+    margin-top: 16px;
+}
+
+.hashbox p{
+    padding-top: 16px;
+    padding-left: 18px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.hashTag li{
+    padding: 10px 18px;
+    font-size: 12px;
+    color: #ABABAB;
+    
+
+}
+.hashTag li:hover{
+    background-color: #E5E5E5;
+}
+.hashTag a:last-child{
+    color: #1D9BF0 !important;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.hashTag li:last-child{
+    padding-bottom: 12px;
+}
+
+.hashTag li:last-child:hover{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+
+
+.hashTag li>p{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 30px;
+    color: #000000;
+    
+}
+
+/*다크 라이트 모드*/
+
+.darkNlight{
+    width: 70px;
+    height: 36px;
+    background-color: #1D9BF0;
+    border-radius: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.bol{
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-top: 2px;
+    margin-left: 36px;
+    transition: all 0.3s;
+}
+
+/*메뉴 트윗 버튼*/
+
+.menshionBox{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #33333371;
+
+}
+.tweetMension{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,-5%);
+    width: 600px;
+    height: 270px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0px 10px;
+}
+.tweetMension span{
+    padding: 10px 10px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+.mensionflex{
+    display: flex;
+    justify-content: space-between;
+}
+#Mension{
+    margin-top: 10px;
+    width: 500px;
+    height: 90px;
+    resize: none; 
+    border: none;
+    outline: none;
+}
+.menshionG{
+    width: 500px;
+    border-bottom: 1px solid #E5E5E5;
+    margin-right: 30px;
+    padding-bottom: 10px;
+}
+.menshionG .selectbox{
+    margin-top: 20px;
+    width: 500px;
+}
+.menshionG .selectbox .tweetSelect span{
+    font-size: 18px;
+    color: #1D9BF0;
+}
+.menshionG .selectbox button{
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.closemention:hover{
+   color: #1D9BF0;
+
+}
